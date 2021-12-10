@@ -20,11 +20,12 @@ document.getElementById('interval-start').addEventListener("click", function () 
     let intervalId = setInterval(function () {
         if (min < 600) {
             intervalDiv.innerHTML = min += 60;
-        }
-        else {
             document.getElementById('interval-stop').addEventListener("click", function () {
                 clearInterval(intervalId);
             })
+        }
+        else {
+            clearInterval(intervalId);
         }
     }, 60000);
 });
